@@ -19,6 +19,8 @@ namespace TestplanTests.Integration
         public async Task GET_retrieves_orders() 
         {
             // Arange
+
+            // Create orders to test
             List<ItemModel> items = new()
             {
                 new ItemModel() { ItemId = "00000000-0000-0000-0000-000000000000" }
@@ -27,11 +29,15 @@ namespace TestplanTests.Integration
             {
                 new() { OrderId = "00000000-0000-0000-0000-000000000000", Items = items }
             };
+            // Instantiate API stub
             TestplanApiStub stubApi = new TestplanApiStub();
+            // Set order repository (required as its used within the endpoint body method
             stubApi.OrderRepository = new OrderRepositoryStub(orders);
             HttpClient client = stubApi.CreateClient();
 
             // Act
+
+            // Excecute request and convert response content to order model list
             var response = await client.GetAsync("/api/Shopping/orders");
             var responseBody = await response.Content.ReadFromJsonAsync<List<OrderModel>>();
 
