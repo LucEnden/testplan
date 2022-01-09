@@ -6,7 +6,8 @@ namespace TestplanLib
     {
         public List<ItemModel> Items { get; set; } = new()
         {
-            new() { ItemId = "00000000-0000-0000-0000-000000000000" }
+            new() { ItemId = "00000000-0000-0000-0000-000000000000" },
+            new() { ItemId = "00000000-0000-0000-0000-000000000001" }
         };
 
         public string PlaceOrder(string[] itemIDs)

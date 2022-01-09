@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using TestplanLib.Models;
 using System.Net.Http.Json;
 using Microsoft.AspNetCore.Mvc.Testing;
+using System.Text;
+using Newtonsoft.Json;
+using TestplanLib;
 
 namespace TestplanTests.Integration
 {
@@ -35,6 +38,31 @@ namespace TestplanTests.Integration
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.Equal(1, responseBody.Count);
+        }
+
+
+        [Fact]
+        public async Task POST_orders_get_placed()
+        {
+            // Arange
+            string[] itemsToOrder =
+            {
+                "00000000-0000-0000-0000-000000000000",
+                "00000000-0000-0000-0000-000000000001"
+            };
+            TestplanApiStub stubApi = new TestplanApiStub();
+            stubApi.OrderRepository = new OrderRepositoryStub();
+            stubApi.ItemRepository = new ItemRepositoryStub();
+            stubApi.OrderManager = new OrderManager();
+            HttpClient client = stubApi.CreateClient();
+
+            var httpContent = new StringContent(JsonConvert.SerializeObject(itemsToOrder), Encoding.UTF8, "application/json");
+
+            // Act
+            var response = await client.PostAsync("/api/Shopping/placeorder", httpContent);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
     }
 }

@@ -21,3 +21,4 @@ D:\Users\luc\repos\temp\TestplanExample\obj\Debug\net6.0\TestplanLib.csproj.Core
 D:\Users\luc\repos\temp\TestplanExample\obj\Debug\net6.0\TestplanLib.dll
 D:\Users\luc\repos\temp\TestplanExample\obj\Debug\net6.0\ref\TestplanLib.dll
 D:\Users\luc\repos\temp\TestplanExample\obj\Debug\net6.0\TestplanLib.pdb
+D:\Users\luc\repos\temp\TestplanExample\obj\Debug\net6.0\TestplanLib.csproj.AssemblyReference.cache

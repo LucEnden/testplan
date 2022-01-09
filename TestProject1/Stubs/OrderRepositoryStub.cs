@@ -6,7 +6,8 @@ namespace TestplanTests.Stubs
 {
     public class OrderRepositoryStub : IOrderRepository
     {
-        private readonly List<OrderModel> _orders;
+        private readonly List<OrderModel> _orders = new();
+        public OrderRepositoryStub() { }
         public OrderRepositoryStub(List<OrderModel> orders)
         {
             _orders = orders;
