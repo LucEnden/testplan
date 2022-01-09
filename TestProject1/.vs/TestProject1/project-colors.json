@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5993f5d4-a86b-4191-84f7-b8a7258b39db": {
+      "ProjectGuid": "5993f5d4-a86b-4191-84f7-b8a7258b39db",
+      "DisplayName": "TestProject1",
+      "ColorIndex": 0
+    },
+    "8dea9f6d-4e6e-49d2-86ec-7186a5f0c549": {
+      "ProjectGuid": "8dea9f6d-4e6e-49d2-86ec-7186a5f0c549",
+      "DisplayName": "TestplanExample",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "a658396a-354a-4d46-af78-f9a72e42a61a": {
+      "ProjectGuid": "a658396a-354a-4d46-af78-f9a72e42a61a",
+      "DisplayName": "TestplanApi",
+      "ColorIndex": 2
+    },
+    "2ea33843-3c45-4bfe-aeec-1944e305b5c1": {
+      "ProjectGuid": "2ea33843-3c45-4bfe-aeec-1944e305b5c1",
+      "DisplayName": "TestplanLib",
+      "ColorIndex": 3
+    },
+    "91c98837-edb1-4c3e-84f9-c00c8bd2e4d4": {
+      "ProjectGuid": "91c98837-edb1-4c3e-84f9-c00c8bd2e4d4",
+      "DisplayName": "TestplanTests",
+      "ColorIndex": 4
+    },
+    "9a9c4bcf-82b9-4afd-9f37-b7d85db3e619": {
+      "ProjectGuid": "9a9c4bcf-82b9-4afd-9f37-b7d85db3e619",
+      "DisplayName": "WebApplication1",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}
