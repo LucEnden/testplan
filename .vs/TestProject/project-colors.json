@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "d57e4f28-ff36-4c34-805d-e97c4505f4e3": {
+      "ProjectGuid": "d57e4f28-ff36-4c34-805d-e97c4505f4e3",
+      "DisplayName": "TestplanTests",
+      "ColorIndex": 0
+    },
+    "412baebb-685e-4591-b830-57a33d28a58d": {
+      "ProjectGuid": "412baebb-685e-4591-b830-57a33d28a58d",
+      "DisplayName": "TestplanApi",
+      "ColorIndex": 1
+    },
+    "26cb7660-e668-47ee-b4fd-d21684f2a72b": {
+      "ProjectGuid": "26cb7660-e668-47ee-b4fd-d21684f2a72b",
+      "DisplayName": "TestplanLib",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
