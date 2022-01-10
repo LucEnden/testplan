@@ -26,7 +26,25 @@ namespace TestplanApi.Controllers
             return _orderRepository.ReadAll();
         }
 
-        [HttpPost("placeorder")]
+        [HttpGet("items")]
+        public ItemModel[] Items()
+        {
+            return _itemRepository.ReadAll();
+        }
+
+        [HttpPost("item/add")]
+        public ItemModel Items(string name)
+        {
+            ItemModel model = new()
+            {
+                Name = name,
+                ItemId = Guid.NewGuid().ToString()
+            };
+            _itemRepository.Create(model);
+            return model;
+        }
+
+        [HttpPost("order/add")]
         public string PlaceOrder(string[] itemIds)
         {
             string orderId = _orderManager.PlaceOrder(itemIds);

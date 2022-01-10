@@ -46,7 +46,6 @@ namespace TestplanTests.Integration
             Assert.Equal(1, responseBody.Count);
         }
 
-
         [Fact]
         public async Task POST_orders_get_placed()
         {
@@ -65,7 +64,7 @@ namespace TestplanTests.Integration
             var httpContent = new StringContent(JsonConvert.SerializeObject(itemsToOrder), Encoding.UTF8, "application/json");
 
             // Act
-            var response = await client.PostAsync("/api/Shopping/placeorder", httpContent);
+            var response = await client.PostAsync("/api/Shopping/order/add", httpContent);
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
