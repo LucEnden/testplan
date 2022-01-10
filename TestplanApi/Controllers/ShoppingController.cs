@@ -21,31 +21,13 @@ namespace TestplanApi.Controllers
         }
 
         [HttpGet("orders")]
-        public OrderModel[] Orders()
+        public OrderModel[] GetOrders()
         {
             return _orderRepository.ReadAll();
         }
 
-        [HttpGet("items")]
-        public ItemModel[] Items()
-        {
-            return _itemRepository.ReadAll();
-        }
-
-        [HttpPost("item/add")]
-        public ItemModel Items(string name)
-        {
-            ItemModel model = new()
-            {
-                Name = name,
-                ItemId = Guid.NewGuid().ToString()
-            };
-            _itemRepository.Create(model);
-            return model;
-        }
-
-        [HttpPost("order/add")]
-        public string PlaceOrder(string[] itemIds)
+        [HttpPost("orders/add")]
+        public string AddOrder(string[] itemIds)
         {
             string orderId = _orderManager.PlaceOrder(itemIds);
             OrderModel model = new()
@@ -55,6 +37,30 @@ namespace TestplanApi.Controllers
             };
             _orderRepository.Create(model);
             return orderId;
+        }
+
+        [HttpGet("items")]
+        public ItemModel[] GetItems()
+        {
+            return _itemRepository.ReadAll();
+        }
+
+        [HttpPost("items/add")]
+        public string AddItem([FromBody] string name)
+        {
+            ItemModel model = new()
+            {
+                Name = name,
+                ItemId = Guid.NewGuid().ToString()
+            };
+            _itemRepository.Create(model);
+            return model.ItemId;
+        }
+
+        [HttpPut("items/update")]
+        public void UpdateItem([FromBody] ItemModel model)
+        {
+            _itemRepository.Update(model);
         }
     }
 }

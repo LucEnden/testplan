@@ -16,6 +16,7 @@ namespace TestplanTests.Stubs
         {
             _items = items;
         }
+        public List<ItemModel> Items { get { return _items; } }
 
         public int Create(ItemModel order)
         {
@@ -39,10 +40,10 @@ namespace TestplanTests.Stubs
             return _items.ToArray();
         }
 
-        public int Update(ItemModel itemId)
+        public int Update(ItemModel item)
         {
-            int index = _items.FindIndex(o => o == itemId);
-            _items[index] = itemId;
+            int index = _items.FindIndex(o => o.ItemId == item.ItemId);
+            _items[index] = item;
             return 1;
         }
     }
